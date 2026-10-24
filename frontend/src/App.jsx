@@ -3,7 +3,6 @@ import { AuthProvider } from './context/AuthContext';
 import { DataProvider } from './context/DataContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import AppLayout from './components/AppLayout';
-import Placeholder from './components/Placeholder';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -12,6 +11,7 @@ import Students from './pages/Students';
 import Attendance from './pages/Attendance';
 import StudentDetails from './pages/StudentDetails';
 import Reports from './pages/Reports';
+import Prediction from './pages/Prediction';
 
 export default function App() {
   return (
@@ -27,7 +27,7 @@ export default function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/students" element={<Students />} />
               <Route path="/attendance" element={<Attendance />} />
-              <Route path="/prediction" element={<Placeholder title="AI Risk Prediction" />} />
+              <Route path="/prediction" element={<Prediction />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/details" element={<StudentDetails />} />
               <Route path="/details/:id" element={<StudentDetails />} />
