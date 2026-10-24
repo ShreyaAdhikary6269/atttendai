@@ -1,0 +1,46 @@
+﻿.back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-weight: 600; text-decoration: none; margin-bottom: 14px; font-size: 14px; }
+.back-link:hover { text-decoration: underline; }
+
+.profile-head { display: flex; align-items: center; gap: 18px; margin-bottom: 22px; flex-wrap: wrap; }
+.profile-avatar {
+  width: 64px; height: 64px; border-radius: 50%; background: var(--primary-soft); color: var(--primary-dark);
+  display: grid; place-items: center; font-size: 28px; font-weight: 700; flex-shrink: 0;
+}
+.profile-info { flex: 1; min-width: 200px; }
+.profile-info .page-title { font-size: 28px; }
+.profile-status { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.profile-status .badge { font-size: 15px; padding: 6px 16px; }
+
+.grid-row.r-explain { grid-template-columns: 1.6fr 1fr; }
+.grid-row.r-two { grid-template-columns: 1fr 1fr; }
+
+.reason-list { display: flex; flex-direction: column; gap: 12px; }
+.reason { display: flex; gap: 12px; align-items: flex-start; line-height: 1.45; }
+.reason .dot { margin-top: 7px; }
+.dot.none { background: #9ca3af; }
+
+.ml-card { background: var(--bg); border: 1px dashed var(--primary-light); display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.ml-state { font-size: 22px; font-weight: 700; color: var(--text-muted); }
+
+.picker-list { display: flex; flex-direction: column; gap: 6px; }
+.picker-item {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; text-align: left;
+  background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+  cursor: pointer; font-size: 15px; font-family: inherit; color: var(--text); transition: background .2s, border-color .2s;
+}
+.picker-item:hover { background: var(--bg); border-color: var(--primary-light); }
+.picker-right { display: flex; align-items: center; gap: 12px; }
+
+@media (max-width: 1100px) {
+  .grid-row.r-explain, .grid-row.r-two { grid-template-columns: 1fr; }
+  .profile-status { align-items: flex-start; }
+}
+
+@media print {
+  .sidebar, .topbar, .no-print, .toast { display: none !important; }
+  .app, .main { display: block; }
+  .content { padding: 0; }
+  body { background: #fff; }
+  .card { box-shadow: none; break-inside: avoid; }
+  .grid-row.r-explain, .grid-row.r-two { grid-template-columns: 1fr; }
+}

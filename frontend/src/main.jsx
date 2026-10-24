@@ -6,6 +6,7 @@ import './theme/pages.css';
 import './theme/dashboard.css';
 import './theme/students.css';
 import './theme/attendance.css';
+import './theme/details.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode><App /></React.StrictMode>
