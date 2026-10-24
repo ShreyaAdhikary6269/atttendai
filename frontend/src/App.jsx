@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import Students from './pages/Students';
+import Attendance from './pages/Attendance';
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
             <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/students" element={<Students />} />
-              <Route path="/attendance" element={<Placeholder title="Attendance" />} />
+              <Route path="/attendance" element={<Attendance />} />
               <Route path="/prediction" element={<Placeholder title="AI Risk Prediction" />} />
               <Route path="/reports" element={<Placeholder title="Reports & Analytics" />} />
               <Route path="/details" element={<Placeholder title="Student Details" />} />
