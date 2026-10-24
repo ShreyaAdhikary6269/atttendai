@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import Students from './pages/Students';
 import Attendance from './pages/Attendance';
 import StudentDetails from './pages/StudentDetails';
+import Reports from './pages/Reports';
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
               <Route path="/students" element={<Students />} />
               <Route path="/attendance" element={<Attendance />} />
               <Route path="/prediction" element={<Placeholder title="AI Risk Prediction" />} />
-              <Route path="/reports" element={<Placeholder title="Reports & Analytics" />} />
+              <Route path="/reports" element={<Reports />} />
               <Route path="/details" element={<StudentDetails />} />
               <Route path="/details/:id" element={<StudentDetails />} />
             </Route>

@@ -1,0 +1,24 @@
+﻿.head-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.filter-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; }
+.filter-field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text-muted); }
+.filter-field input, .filter-field select {
+  padding: 9px 12px; border: 1px solid var(--border); border-radius: 10px; font-size: 15px;
+  background: #fff; color: var(--text); font-family: inherit; min-width: 150px;
+}
+.filter-field input:focus, .filter-field select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+.reset-btn { margin-bottom: 1px; }
+.print-only { display: none; }
+
+@media print {
+  .print-only { display: block; }
+  .print-head { margin-bottom: 16px; }
+  .print-head h2 { color: #1e3a8a; margin-bottom: 4px; }
+  .print-head p { font-size: 13px; color: #444; }
+  .stat-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .stat-card { padding: 10px; }
+  .stat-icon { display: none; }
+  .stat-value { font-size: 20px; }
+  .table { font-size: 12px; }
+  .table th, .table td { padding: 6px 8px; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
